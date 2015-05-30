@@ -1,0 +1,11 @@
+#OSX ignore------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+#Jekyll ignore---------
+_site/
+.sass-cache/
+.jekyll-metadata
