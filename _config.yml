@@ -1,8 +1,8 @@
 # Site settings
 title: Nick Bumbarger
 email: nick@nickbumbarger.com
-description: > # this means to ignore newlines until "baseurl:"
-  While I'm experimenting with maps, Ruby on Rails, JavaScript and the web in general, I'll try to share the best of what I learn right here on these pages. 
+description: > # "baseurl:"
+  Follow my journey from Geonerd to Geospatial Badass, as I take the plunge into full-stack web development.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://nbumbarger.github.io/"
@@ -10,5 +10,4 @@ github_username:  nbumbarger
 linkedin_username: nbumbarger
 
 # Build settings
-# markdown: kramdown
-markdown: redcarpet
+markdown: kramdown
