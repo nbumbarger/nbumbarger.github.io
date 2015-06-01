@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spatial Data Production presentation (Everything Conference)"
-date:   2015-05-30 14:19:12
+date:   2015-05-31 12:19:00
 categories:
 ---
 
@@ -21,4 +21,4 @@ The goal of the presentation was to demystify programmatic map production, and d
 #Links
 You can view my [spatial data production presentation here](http://nbumbarger.github.io/everything_conf/), or view [the source](https://github.com/nbumbarger/everything_conf) on GitHub. The presentation scratches the surface of a JavaScript tool called [remark](https://github.com/gnab/remark), which generates slides based on a special kind of markdown syntax and is a blast to use.
 
-As a followup to this article, I wrote a piece about [adding Project Pages]({% post_url 2015-05-30-hosting_using_gh-pages %}) (including assets) to GitHub repositories using the *gh-pages* branch technique, which is the way I decided to host this presentation.
+As a followup to this article, I wrote a piece about [adding Project Pages]({% post_url 2015-05-31-hosting_using_gh-pages %}) (including assets) to GitHub repositories using the *gh-pages* branch technique, which is the way I decided to host this presentation.

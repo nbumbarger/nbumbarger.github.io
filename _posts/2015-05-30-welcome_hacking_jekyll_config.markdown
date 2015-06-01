@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome (or, hacking the Jekyll config)"
-date:   2015-05-28 14:13:59
+date:   2015-05-30 21:13:00
 categories:
 ---
 
