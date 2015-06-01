@@ -1,7 +1,7 @@
 # Site settings
 title: Nick Bumbarger
 email: nick@nickbumbarger.com
-description: > # "baseurl:"
+description: >
   Follow my journey from Geonerd to Geospatial Badass, as I take the plunge into full-stack web development.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
