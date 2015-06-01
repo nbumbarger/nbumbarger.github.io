@@ -7,7 +7,7 @@ description: > # "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://nbumbarger.github.io/"
 github_username:  nbumbarger
-linkedin_username: nbumbarger
+linkedin_username: nickbumbarger
 
 # Build settings
 markdown: kramdown
