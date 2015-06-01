@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://www.nickbumbarger.com/</loc>
+  <lastmod>2015-06-01T15:21:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.nickbumbarger.com/about/</loc>
+  <lastmod>2015-06-01T15:21:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.nickbumbarger.com/2015/05/31/placemarkstory_dot_com.html</loc>
+  <lastmod>2015-06-01T15:21:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.nickbumbarger.com/2015/05/31/hosting_using_gh-pages.html</loc>
+  <lastmod>2015-06-01T15:21:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.nickbumbarger.com/2015/05/31/spatial_data_production.html</loc>
+  <lastmod>2015-06-01T15:21:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.nickbumbarger.com/2015/05/30/welcome_hacking_jekyll_config.html</loc>
+  <lastmod>2015-06-01T15:21:47+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>
