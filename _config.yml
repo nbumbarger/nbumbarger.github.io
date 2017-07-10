@@ -1,0 +1,13 @@
+# Site settings
+title: Nick Bumbarger
+email: nick@nickbumbarger.com
+description: >
+  Follow my journey from Geonerd to Geospatial Badass, as I take the plunge into full-stack web development.
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://nbumbarger.github.io/"
+github_username:  nbumbarger
+linkedin_username: nickbumbarger
+
+# Build settings
+markdown: kramdown
