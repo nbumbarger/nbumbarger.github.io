@@ -2,19 +2,42 @@
 
 export const mapSettings = {
   container: 'map',
-  style: 'mapbox://styles/nbumbarg/cj4yols3j3yhb2rs63mixw5sw',
+  style: 'mapbox://styles/mapbox/satellite-v9',
   center: [-76.96, 38.88],
-  zoom: 15
+  zoom: 18,
+  bearing: 0,
+  speed: 0.1,
+  curve: 1
 };
 
 export const staticSettings = {
   staticOverlay: 'static-overlay',
-  scaleFactor: 4,
+  scaleFactor: 3,
   samples: [],
   sampleIndex: 0,
   scanOffsetY: 0,
   scanSize: 0,
-  FPS: 50,
-  scanSpeed: 15,
-  SAMPLE_COUNT: 10
+  FPS: 30,
+  scanSpeed: 100,
+  SAMPLE_COUNT: 5
 };
+
+export const mapPOIs = [
+  {name: 'Dupont Circle', coords: [-77.04227, 38.910337]},
+  {name: 'National Geographic Museum', coords: [-77.037978, 38.905194]},
+  {name: 'Foggy Bottom', coords: [-77.053342, 38.900218]},
+  {name: 'Georgetown', coords: [-77.066045, 38.91027]},
+  {name: 'United States Naval Observatory', coords: [-77.066174, 38.922324]},
+  {name: 'Smithsonian National Zoological Park', coords: [-77.049394, 38.931038]},
+  {name: 'Columbia Heights', coords: [-77.03021, 38.928968]},
+  {name: 'Brookland', coords: [-76.982574, 38.929102]},
+  {name: 'Navy Yard', coords: [-76.997852, 38.877136]},
+  {name: 'American University Park', coords: [-77.089691, 38.942588]},
+  {name: 'Chevy Chase', coords: [-77.066689, 38.964948]},
+  {name: 'Rock Creek Golf Course', coords: [-77.038794, 38.965682]},
+  {name: 'Sherman Circle Northwest', coords: [-77.021542, 38.947328]},
+  {name: 'Tacoma', coords: [-77.019997, 38.972756]},
+  {name: 'National Mall', coords: [-77.023001, 38.88963]},
+  {name: 'Lincoln Memorial', coords: [-77.050209, 38.889296]},
+  {name: 'Hill East', coords: [-76.979871, 38.884853]}
+];

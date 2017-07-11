@@ -1,23 +1,42 @@
 'use strict';
+
 import mapboxgl from 'mapbox-gl';
 import config from './config';
 
-import { mapSettings, staticSettings } from './constants';
+import { mapSettings, staticSettings, mapPOIs } from './constants';
 
 (function start () {
-  addMap();
+  initializeMap();
   addStatic();
 })();
 
-function addMap () {
+const mapZoomTo = (map) => {
+  map.flyTo({
+    center: mapPOIs[Math.floor(Math.random() * mapPOIs.length)].coords,
+    zoom: mapSettings.zoom,
+    bearing: mapSettings.bearing,
+    speed: mapSettings.speed,
+    curve: mapSettings.curve,
+    easing: (t) => t
+  });
+};
+
+function initializeMap () {
   mapboxgl.accessToken = config.accessToken;
   const map = new mapboxgl.Map({
     container: mapSettings.container,
     style: mapSettings.style,
-    center: mapSettings.center,
+    center: mapPOIs[Math.floor(Math.random() * mapPOIs.length)].coords,
     zoom: mapSettings.zoom
   });
-  return map;
+
+  map.on('load', () => {
+    mapZoomTo(map);
+  });
+
+  map.on('moveend', () => {
+    mapZoomTo(map);
+  });
 }
 
 function addStatic () {
