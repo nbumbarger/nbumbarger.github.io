@@ -18,7 +18,7 @@ export const staticSettings = {
   scanOffsetY: 0,
   scanSize: 0,
   FPS: 30,
-  scanSpeed: 100,
+  scanSpeed: 8,
   SAMPLE_COUNT: 5
 };
 
