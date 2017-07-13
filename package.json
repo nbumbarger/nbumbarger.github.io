@@ -1,14 +1,14 @@
 {
   "name": "nbumbarger.github.io",
   "version": "1.0.0",
-  "description": "Nick's personal sit.",
+  "description": "Nick's personal site",
   "repository": {
     "type": "git",
     "url": "https://github.com/nbumbarger/nbumbarger.github.io.git"
   },
   "author": {
-    "name": "Development Seed",
-    "url": "https://developmentseed.org"
+    "name": "Nick Bumbarger",
+    "url": "https://nickbumbarger.com"
   },
   "license": "BSD-2-Clause",
   "bugs": {
@@ -50,6 +50,7 @@
     "eslint": "^3.18.0",
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^2.1.1",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.6",
@@ -77,6 +78,8 @@
   },
   "dependencies": {
     "lodash.defaultsdeep": "^4.6.0",
-    "mapbox-gl": "^0.38.0"
+    "mapbox-gl": "^0.38.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
