@@ -6,7 +6,7 @@ cd dist
 git init
 git config user.name "Travis-CI"
 git config user.email "travis@somewhere.com"
-git checkout -b develop
 git add .
 git commit -m "CI deploy to user page master"
+git checkout -b develop
 git push --force --quiet "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" develop:master
