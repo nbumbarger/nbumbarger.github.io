@@ -4,6 +4,10 @@
        url('../fonts/NexaRustSans-Black-Free-webfont.woff') format('woff');
 }
 
+body {
+  background-color: #000;
+}
+
 html, body, #static-overlay {
   padding: 0;
   margin: 0;
@@ -36,7 +40,7 @@ html, body, #static-overlay {
   z-index: 1;
 }
 
-.brand {
+.header {
   position: absolute;
   bottom: 1rem;
   left: 1rem;

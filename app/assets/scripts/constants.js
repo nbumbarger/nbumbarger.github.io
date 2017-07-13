@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 export const mapSettings = {
   container: 'map',
@@ -8,7 +8,7 @@ export const mapSettings = {
   bearing: 0,
   speed: 0.1,
   curve: 1
-};
+}
 
 export const staticSettings = {
   staticOverlay: 'static-overlay',
@@ -20,7 +20,7 @@ export const staticSettings = {
   FPS: 30,
   scanSpeed: 8,
   SAMPLE_COUNT: 5
-};
+}
 
 export const mapPOIs = [
   {name: 'Dupont Circle', coords: [-77.04227, 38.910337]},
@@ -40,4 +40,4 @@ export const mapPOIs = [
   {name: 'National Mall', coords: [-77.023001, 38.88963]},
   {name: 'Lincoln Memorial', coords: [-77.050209, 38.889296]},
   {name: 'Hill East', coords: [-76.979871, 38.884853]}
-];
+]
