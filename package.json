@@ -17,9 +17,8 @@
   "homepage": "https://github.com/nbumbarger/nbumbarger.github.io",
   "scripts": {
     "postinstall": "[ -f app/assets/scripts/config/local.js ] || echo \"'use strict';\n\nexport default {\n  environment: 'development'\n};\" > app/assets/scripts/config/local.js",
-    "serve": "PAGES_ENV=development gulp serve",
-    "build": "PAGES_ENV=production NODE_ENV=production gulp",
-    "stage": "PAGES_ENV=staging NODE_ENV=staging gulp",
+    "serve": "gulp collecticons && PAGES_ENV=development gulp serve",
+    "build": "gulp collecticons && PAGES_ENV=production NODE_ENV=production gulp",
     "lint": "eslint app/assets/scripts/ --ext .js",
     "test": "echo \"No tests\" && exit 0"
   },
@@ -45,6 +44,7 @@
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
+    "collecticons-processor": "^3.0.0",
     "del": "^2.2.2",
     "envify": "^4.0.0",
     "eslint": "^3.18.0",
