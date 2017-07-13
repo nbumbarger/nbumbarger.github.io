@@ -106,6 +106,7 @@ nbproject
 .idea
 .resources
 .node_history
+dist
 temp
 tmp
 .tmp
