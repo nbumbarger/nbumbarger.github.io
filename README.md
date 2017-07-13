@@ -4,6 +4,9 @@
 
 The steps below will walk you through setting up your own instance of the project.
 
+#### Note:
+This app is developed to deploy to a Github user page repository via Travis-CI. Because user pages must be served compiled from the `master` branch rather than a `gh-pages` branch, only the `development` branch is intended to host the source code and canonical commit history.
+
 ### Install Project Dependencies
 To set up the development environment for this website, you'll need to install the following on your system:
 
@@ -18,34 +21,14 @@ If you use [`nvm`](https://github.com/creationix/nvm), activate the desired Node
 nvm install
 ```
 
-Install Node modules:
+Install Node modules (from the src directory):
 
 ```
 yarn install
 ```
 
 ### Usage
-
-#### Config files
-All the config files can be found in `app/assets/scripts/config`.
-After installing the projects there will be 3 main files:
-  - `local.js` - Used only for local development. On production this file should not exist or be empty.
-  - `staging.js`
-  - `production.js`
-
-The `production.js` file serves as base and the other 2 will override it as needed:
-  - `staging.js` will be loaded whenever the env variable `DS_ENV` is set to staging.
-  - `local.js` will be loaded if it exists.
-
-The following options must be set: (The used file will depend on the context):
-  - `value` - Description
-
-Example:
-```
-module.exports = {
-  value: 'some-value'
-};
-```
+The development version of this application resides in the src directory, which is the home directory for all commands.
 
 #### Starting the app
 
@@ -66,5 +49,4 @@ or
 ```
 yarn run stage
 ```
-This will package the app and place all the contents in the `dist` directory.
-The app can then be run by any web server.
+This will package the app and place all the contents in the `dist` directory. The app can then be run by any web server. Commits to the `develop` branch will compile the app to the `master` branch of a Github user page repository.
