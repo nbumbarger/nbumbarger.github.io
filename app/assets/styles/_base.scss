@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @font-face {
   font-family: 'NexaRustSans-Black-Free-webfont';
   src: url('../fonts/NexaRustSans-Black-Free-webfont.woff2') format('woff2'),
        url('../fonts/NexaRustSans-Black-Free-webfont.woff') format('woff');
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'NexaRustSans-Black-Free-webfont';
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #000;
 }
 
-body {
-  background-color: #000;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'NexaRustSans-Black-Free-webfont';
 }
 
 html, body, #static-overlay {
