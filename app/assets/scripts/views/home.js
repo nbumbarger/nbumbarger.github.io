@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 
-import MapBackground from '../components/map-background'
+import HomeBackground from '../components/home-background'
 import Header from '../components/header'
 
 class Home extends Component {
@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div className='home'>
         <Header />
-        <MapBackground />
+        <HomeBackground />
       </div>
     )
   }
