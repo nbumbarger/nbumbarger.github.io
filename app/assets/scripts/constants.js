@@ -41,3 +41,10 @@ export const mapPOIs = [
   {name: 'Lincoln Memorial', coords: [-77.050209, 38.889296]},
   {name: 'Hill East', coords: [-76.979871, 38.884853]}
 ]
+
+export const navLinks = [
+  {name: 'LinkedIn', iconClass: 'collecticon-linkedin', url: 'https://www.linkedin.com/in/nbumbarger/'},
+  {name: 'Github', iconClass: 'collecticon-github', url: 'https://github.com/nbumbarger/'},
+  {name: 'Twitter', iconClass: 'collecticon-twitter', url: 'https://twitter.com/Sir_Mapsalot'},
+  {name: 'Email', iconClass: 'collecticon-envelope', url: 'mailto:nick@nickbumbarger.com'}
+]

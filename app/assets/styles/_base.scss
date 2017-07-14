@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @font-face {
   font-family: 'NexaRustSans-Black-Free-webfont';
   src: url('../fonts/NexaRustSans-Black-Free-webfont.woff2') format('woff2'),
@@ -5,7 +6,12 @@
 }
 
 body {
+  font-family: 'Lato', sans-serif;
   background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'NexaRustSans-Black-Free-webfont';
 }
 
 html, body, #static-overlay {
@@ -38,40 +44,4 @@ html, body, #static-overlay {
   perspective: 1000;
   opacity: 0.75;
   z-index: 1;
-}
-
-.header {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  font-family: 'NexaRustSans-Black-Free-webfont';
-  z-index: 2;
-  mix-blend-mode: screen;
-  h1 {
-    font-size: 10rem;
-    letter-spacing: -0.75rem;
-    word-spacing: -1rem;
-    line-height: 8rem;
-    color: rgba(150, 75, 0, 0.8);
-  }
-  h2 {
-    font-size: 1.4rem;
-    letter-spacing: 0.15rem;
-    color: rgba(255, 255, 255, 0.4);
-    margin-left: 0.4rem;
-  }
-  a {
-    text-decoration: none;
-    h1, h2 {
-      transition: all 0.5s;
-    }
-    &:hover {
-      h1 {
-        text-shadow: 0 0 10px rgba(200, 100, 0, 0.8);
-      }
-      h2 {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-      }
-    }
-  }
 }

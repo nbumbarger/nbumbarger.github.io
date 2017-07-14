@@ -6,7 +6,7 @@ import mapboxgl from 'mapbox-gl'
 import config from '../config'
 import { mapSettings, mapPOIs, staticSettings } from '../constants'
 
-class MapBackground extends Component {
+class HomeBackground extends Component {
   initializeMap () {
     mapboxgl.accessToken = config.accessToken
     const map = new mapboxgl.Map({
@@ -130,4 +130,4 @@ class MapBackground extends Component {
   }
 }
 
-export default MapBackground
+export default HomeBackground
