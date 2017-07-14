@@ -10,8 +10,8 @@ class Header extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      navHintActive: false,
-      navActive: false
+      navHintActive: true,
+      navActive: true
     }
     this.handleHeaderMouseOver = this.handleHeaderMouseOver.bind(this)
     this.handleHeaderMouseOut = this.handleHeaderMouseOut.bind(this)
