@@ -3,6 +3,8 @@
 import React, { Component } from 'react'
 import { Motion, spring } from 'react-motion'
 
+import NavArrows from './nav-arrows'
+
 class Header extends Component {
   constructor (props) {
     super(props)
@@ -10,6 +12,7 @@ class Header extends Component {
       navHintActive: false
     }
     this.handleMouseOver = this.handleMouseOver.bind(this)
+    this.handleMouseOut = this.handleMouseOut.bind(this)
   }
 
   handleMouseOver () {
@@ -27,6 +30,7 @@ class Header extends Component {
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
       >
+        <div className='header-text'>
         <a href='mailto:nbumbarger@gmail.com'>
           <Motion defaultStyle={{x1: -25, o1: 0, x2: -50, o2: 0}} style={{
             x1: spring(0, {stiffness: 150, damping: 25}),
@@ -52,6 +56,8 @@ class Header extends Component {
             }}
           </Motion>
         </a>
+      </div>
+      <NavArrows navHintActive={this.state.navHintActive} />
       </header>
     )
   }
