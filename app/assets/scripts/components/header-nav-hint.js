@@ -10,7 +10,7 @@ const HeaderNavHint = (props) => {
       ? (<ul className={classnames('nav-cancel', {hidden: !props.navActive})}>
           <li className='collecticon-circle-xmark' />
          </ul>)
-      : (<ul className={classnames('nav-hint', {hidden: !props.navHintActive})}>
+      : (<ul className={classnames('nav-hint', {hidden: !props.navHintActive && !props.mobileWidth})}>
           <li className='collecticon-chevron-up' />
           <li className='collecticon-chevron-up' />
           <li className='collecticon-chevron-up' />
@@ -23,7 +23,8 @@ const HeaderNavHint = (props) => {
 
 HeaderNavHint.propTypes = {
   navHintActive: PropTypes.bool,
-  navActive: PropTypes.bool
+  navActive: PropTypes.bool,
+  mobileWidth: PropTypes.bool
 }
 
 export default HeaderNavHint

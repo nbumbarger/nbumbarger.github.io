@@ -1,17 +1,21 @@
 .header {
   position: absolute;
+  min-width: 37rem;
   bottom: 1rem;
   left: 1rem;
   z-index: 2;
   mix-blend-mode: screen;
   cursor: pointer;
+  user-select: none;
   .header-text {
     float: left;
     h1, h2 {
+      white-space: pre;
       transition: all 0.5s;
       z-index: 3;
     }
     h1 {
+      float: left;
       font-size: 10rem;
       letter-spacing: -0.75rem;
       word-spacing: -1rem;
@@ -19,10 +23,12 @@
       color: rgba(200, 100, 0, 0.8);
     }
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.41rem;
       letter-spacing: 0.15rem;
       color: rgba(255, 255, 255, 0.7);
       margin-left: 0.4rem;
+      float: left;
+      clear: left;
     }
     :hover h1 {
       text-shadow: 0 0 15px rgb(200, 100, 0);
@@ -86,29 +92,29 @@
   z-index: 4;
   .header-nav-button {
     float: left;
-    width: 7.25rem;
-    margin-left: 0.75rem;
+    width: 7.36rem;
+    margin-left: 0.73rem;
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 0.15rem;
     list-style: none;
     transition: all 0.2s;
-    &:hover {
-      box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
-      text-shadow: 0 0 5px rgb(255, 255, 255);
-      .nav-button-icon {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-      .nav-button-text {
-        background-color: rgba(255, 255, 255, 0.075);
+    a {
+      color:rgb(230, 230, 230);
+      text-decoration: none;
+      &:hover {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+        text-shadow: 0 0 5px rgb(255, 255, 255);
+        .nav-button-icon {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+        .nav-button-text {
+          background-color: rgba(255, 255, 255, 0.075);
+        }
       }
     }
     &:first-child {
       margin: 0;
-    }
-    a {
-      color:rgb(230, 230, 230);
-      text-decoration: none;
     }
     .nav-button-icon {
       float: left;
