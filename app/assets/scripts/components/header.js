@@ -11,7 +11,7 @@ class Header extends Component {
     super(props)
     this.state = {
       mobileWidth: false,
-      navHintActive: false,
+      navHintActive: true,
       navActive: false
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this)

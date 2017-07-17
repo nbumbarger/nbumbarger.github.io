@@ -1,5 +1,6 @@
 .header {
   @include media(xsmall-only) {
+    min-width: auto;
     .header-text {
       width: 23rem !important;
       h1 {
