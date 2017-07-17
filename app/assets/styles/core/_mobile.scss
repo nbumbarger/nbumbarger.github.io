@@ -1,3 +1,9 @@
+html {
+  @include media(xsmall-only) {
+    font-size: 13.5px;
+  }
+}
+
 .header {
   @include media(xsmall-only) {
     min-width: auto;
