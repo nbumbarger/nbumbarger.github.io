@@ -46,8 +46,23 @@
 @import "normalize-opentype";
 
 
+/* Fonts
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css?family=Lato');
+   @font-face {
+     font-family: 'NexaRustSans-Black-Free-webfont';
+     src: url('../fonts/NexaRustSans-Black-Free-webfont.woff2') format('woff2'),
+          url('../fonts/NexaRustSans-Black-Free-webfont.woff') format('woff');
+   }
+
+
 /* Settings
    ========================================================================== */
+
+@import "settings/variables";
+@import "settings/functions";
+@import "settings/mixins";
 
 
 /* Main
@@ -55,3 +70,4 @@
 
 @import "base";
 @import "components/header";
+@import "components/mobile";

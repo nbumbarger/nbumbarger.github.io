@@ -13,16 +13,16 @@ const HeaderNav = (props) => {
       x: spring(props.navActive ? 1.5 : -75, {stiffness: 60, damping: 15}),
       o: spring(props.navActive ? 1 : 0, {stiffness: 60, damping: 20})
     }}>
-      {interpolation => {
-        return (
-          <nav className='header-nav' style={{left: `${interpolation.x}rem`, opacity: interpolation.o}}>
-            <ul>
-              {navLinks.map((item) => <HeaderNavButton key={`nav-button-${item.name}`} item={item} />)}
-            </ul>
-          </nav>
-        )
-      }
+    {interpolation => {
+      return (
+        <nav className='header-nav' style={{left: `${interpolation.x}rem`, opacity: interpolation.o}}>
+          <ul>
+            {navLinks.map((item) => <HeaderNavButton key={`nav-button-${item.name}`} item={item} />)}
+          </ul>
+        </nav>
+      )
     }
+  }
   </Motion>)
 }
 

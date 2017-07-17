@@ -1,0 +1,47 @@
+.header {
+  @include media(xsmall-only) {
+    .header-text {
+      width: 23rem !important;
+      h1 {
+        font-size: 8rem;
+        &:last-child {
+          clear: left;
+        }
+        line-height: 6.5rem;
+      }
+    }
+    .nav-hint, .nav-cancel {
+      margin-left: -4.5rem;
+    }
+    .description {
+      float: left;
+      h2 {
+        line-height: 1.5rem;
+        .description-part1 {
+          display: block;
+          font-size: 0.8rem;
+        }
+        .description-part2 {
+          display: block;
+          font-size: 1.775rem;
+        }
+      }
+    }
+  }
+}
+
+.header-nav {
+  @include media(xsmall-only) {
+    bottom: 0.5rem;
+    .header-nav-button {
+      width: 10rem;
+      margin: 0 0 .4rem 0;
+      &:nth-child(2), &:nth-child(4) {
+        margin-left: 0.5rem;
+      }
+      &:nth-child(3) {
+        clear: left;
+      }
+    }
+  }
+}
