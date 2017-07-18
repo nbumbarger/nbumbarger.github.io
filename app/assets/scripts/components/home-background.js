@@ -122,7 +122,7 @@ class HomeBackground extends Component {
 
   render () {
     return (
-      <div className='map-background'>
+      <div className='home__background'>
         <canvas id='static-overlay'></canvas>
         <div id='map'></div>
       </div>
