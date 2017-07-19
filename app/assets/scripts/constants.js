@@ -5,7 +5,7 @@ export const mapSettings = {
   style: 'mapbox://styles/mapbox/satellite-v9',
   zoom: 19,
   pitch: 60,
-  speed: 0.25,
+  speed: 0.15,
   curve: 0.75
 }
 

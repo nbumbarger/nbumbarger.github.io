@@ -121,7 +121,7 @@ class HomeBackground extends Component {
 
       context.fillStyle = grd
       context.fillRect(0, scanOffsetY, canvas.width, scanSize + scanOffsetY)
-      context.globalCompositeOperation = 'lighter'
+      context.globalCompositeOperation = 'lighten'
 
       scanOffsetY += (canvas.height / (FPS * scanSpeed))
       if (scanOffsetY > canvas.height) scanOffsetY = -(scanSize / 2)
