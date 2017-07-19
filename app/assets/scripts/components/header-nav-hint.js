@@ -7,10 +7,10 @@ import classnames from 'classnames'
 const HeaderNavHint = (props) => {
   return (
     props.navActive
-      ? (<ul className={classnames('nav-cancel', {hidden: !props.navActive})}>
+      ? (<ul className={classnames('header-nav-hint nav-cancel', {hidden: !props.navActive})}>
           <li className='collecticon-circle-xmark' />
          </ul>)
-      : (<ul className={classnames('nav-hint', {hidden: !props.navHintActive && !props.mobileWidth})}>
+      : (<ul className={classnames('header-nav-hint nav-activate', {hidden: !props.navHintActive && !props.mobileWidth})}>
           <li className='collecticon-chevron-up' />
           <li className='collecticon-chevron-up' />
           <li className='collecticon-chevron-up' />

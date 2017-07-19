@@ -1,15 +1,15 @@
 'use strict'
 
 import React, { Component } from 'react'
-import mapboxgl from 'mapbox-gl'
+import PropTypes from 'prop-types'
 
 import config from '../config'
 import { mapSettings, mapPOIs, staticSettings } from '../constants'
 
 class HomeBackground extends Component {
   initializeMap () {
-    mapboxgl.accessToken = config.accessToken
-    const map = new mapboxgl.Map({
+    this.props.mapboxgl.accessToken = config.accessToken
+    const map = new this.props.mapboxgl.Map({
       container: mapSettings.container,
       style: mapSettings.style,
       center: mapPOIs[Math.floor(Math.random() * mapPOIs.length)].coords,
@@ -122,12 +122,16 @@ class HomeBackground extends Component {
 
   render () {
     return (
-      <div className='home__background'>
+      <div className='home-background'>
         <canvas id='static-overlay'></canvas>
         <div id='map'></div>
       </div>
     )
   }
+}
+
+HomeBackground.propTypes = {
+  mapboxgl: PropTypes.object
 }
 
 export default HomeBackground

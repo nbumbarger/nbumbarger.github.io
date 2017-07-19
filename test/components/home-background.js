@@ -1,15 +1,14 @@
+'use strict'
+
 import React from 'react'
 import test from 'ava'
 import { shallow } from 'enzyme'
-import proxyquire from 'proxyquire'
 import mockboxGL from 'mapbox-gl-js-mock'
 
-const { HomeBackground } = proxyquire.noCallThru().load('../../app/assets/scripts/components/home-background', {
-  'mapbox-gl': mockboxGL
-})
+import HomeBackground from '../../app/assets/scripts/components/home-background'
 
-test('home test', t => {
-  const view = shallow(<HomeBackground />)
+test('home-background test', t => {
+  const component = shallow(<HomeBackground mapboxgl={mockboxGL}/>)
 
-  t.truthy(view.hasClass('home__background'))
+  t.truthy(component.hasClass('home-background'))
 })

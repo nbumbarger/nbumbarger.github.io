@@ -9,7 +9,7 @@ import { navLinks } from '../constants'
 
 const HeaderNav = (props) => {
   return (
-    <Motion defaultStyle={{x: -10, o: 0}} style={{
+    <Motion className='header-nav-container' defaultStyle={{x: -10, o: 0}} style={{
       x: spring(props.navActive ? 1.5 : -75, {stiffness: 60, damping: 15}),
       o: spring(props.navActive ? 1 : 0, {stiffness: 60, damping: 20})
     }}>
