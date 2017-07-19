@@ -42,7 +42,7 @@
       text-shadow: 0 0 15px rgb(255, 255, 255);
     }
   }
-  .nav-hint, .nav-cancel {
+  .nav-activate, .nav-cancel {
     float: left;
     margin-top: 0.25rem;
     transition: opacity 0.5s;
@@ -60,7 +60,7 @@
       opacity: 0.3;
     }
   }
-  .nav-hint li {
+  .nav-activate li {
     $speed: 2s;
     transition: all $speed ease-in-out;
     @keyframes blink {

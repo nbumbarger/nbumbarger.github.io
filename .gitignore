@@ -111,3 +111,4 @@ dist
 temp
 tmp
 .tmp
+.nyc_output
