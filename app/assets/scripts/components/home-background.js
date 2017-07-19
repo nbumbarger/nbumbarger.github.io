@@ -36,10 +36,13 @@ class HomeBackground extends Component {
 
   addStatic () {
     const { staticOverlay, scaleFactor, FPS, scanSpeed, SAMPLE_COUNT } = staticSettings
-    let { samples, sampleIndex, scanSize, scanOffsetY } = staticSettings
+    let { scanSize, scanOffsetY } = staticSettings
 
     const canvas = document.querySelector(`#${staticOverlay}`)
     const context = canvas.getContext('2d')
+
+    let samples = []
+    let sampleIndex = 0
 
     window.onresize = function () {
       canvas.width = canvas.offsetWidth / scaleFactor
@@ -93,10 +96,9 @@ class HomeBackground extends Component {
       grd.addColorStop(0, 'rgba(255,255,255,0)')
       grd.addColorStop(0.1, 'rgba(255,255,255,0)')
       grd.addColorStop(0.2, 'rgba(255,255,255,0.2)')
-      grd.addColorStop(0.3, 'rgba(255,255,255,0.0)')
       grd.addColorStop(0.45, 'rgba(255,255,255,0.1)')
-      grd.addColorStop(0.5, 'rgba(255,255,255,0.45)')
-      grd.addColorStop(0.55, 'rgba(255,255,255,0.30)')
+      grd.addColorStop(0.5, 'rgba(255,255,255,0.25)')
+      grd.addColorStop(0.55, 'rgba(255,255,255,0.2)')
       grd.addColorStop(0.6, 'rgba(255,255,255,0.15)')
       grd.addColorStop(1, 'rgba(255,255,255,0)')
 
