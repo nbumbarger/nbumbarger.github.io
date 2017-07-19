@@ -3,11 +3,10 @@
 export const mapSettings = {
   container: 'map',
   style: 'mapbox://styles/mapbox/satellite-v9',
-  center: [-76.96, 38.88],
-  zoom: 18,
-  bearing: 0,
-  speed: 0.1,
-  curve: 1
+  zoom: 19,
+  pitch: 60,
+  speed: 0.25,
+  curve: 0.75
 }
 
 export const staticSettings = {
