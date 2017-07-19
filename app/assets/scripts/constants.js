@@ -13,13 +13,11 @@ export const mapSettings = {
 export const staticSettings = {
   staticOverlay: 'static-overlay',
   scaleFactor: 3,
-  samples: [],
-  sampleIndex: 0,
-  scanOffsetY: 0,
+  scanOffsetY: 50,
   scanSize: 0,
-  FPS: 30,
-  scanSpeed: 8,
-  SAMPLE_COUNT: 5
+  FPS: 23,
+  scanSpeed: 6,
+  SAMPLE_COUNT: 7
 }
 
 export const mapPOIs = [
