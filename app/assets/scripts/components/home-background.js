@@ -5,14 +5,22 @@ import PropTypes from 'prop-types'
 
 import config from '../config'
 import { mapSettings, mapPOIs, staticSettings } from '../constants'
+import { getBearing } from '../utils/map'
 
 class HomeBackground extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      poiIndex: Math.floor(Math.random() * mapPOIs.length)
+    }
+  }
+
   initializeMap () {
     this.props.mapboxgl.accessToken = config.accessToken
     const map = new this.props.mapboxgl.Map({
       container: mapSettings.container,
       style: mapSettings.style,
-      center: mapPOIs[Math.floor(Math.random() * mapPOIs.length)].coords,
+      center: mapPOIs[this.state.poiIndex].coords,
       zoom: mapSettings.zoom
     })
     map.on('load', () => {
@@ -24,14 +32,23 @@ class HomeBackground extends Component {
   }
 
   mapZoomTo (map) {
+    // Set bearing to slowly rotate transition view towards next point
+    const newIndex = Math.floor(Math.random() * mapPOIs.length)
+    const startCoord = mapPOIs[this.state.poiIndex].coords
+    const endCoord = mapPOIs[newIndex].coords
+    const bearing = getBearing(startCoord, endCoord)
+
     map.flyTo({
-      center: mapPOIs[Math.floor(Math.random() * mapPOIs.length)].coords,
+      center: endCoord,
       zoom: mapSettings.zoom,
-      bearing: mapSettings.bearing,
+      bearing: bearing,
+      pitch: mapSettings.pitch,
       speed: mapSettings.speed,
       curve: mapSettings.curve,
       easing: (t) => t
     })
+
+    this.setState({poiIndex: newIndex})
   }
 
   addStatic () {
@@ -104,7 +121,7 @@ class HomeBackground extends Component {
 
       context.fillStyle = grd
       context.fillRect(0, scanOffsetY, canvas.width, scanSize + scanOffsetY)
-      context.globalCompositeOperation = 'lighter'
+      context.globalCompositeOperation = 'lighten'
 
       scanOffsetY += (canvas.height / (FPS * scanSpeed))
       if (scanOffsetY > canvas.height) scanOffsetY = -(scanSize / 2)

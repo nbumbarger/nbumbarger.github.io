@@ -103,6 +103,7 @@
     "watchify": "^3.9.0"
   },
   "dependencies": {
+    "@turf/bearing": "^4.5.2",
     "classnames": "^2.2.5",
     "lodash.defaultsdeep": "^4.6.0",
     "mapbox-gl": "^0.38.0",
