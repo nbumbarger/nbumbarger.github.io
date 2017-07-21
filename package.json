@@ -8,13 +8,13 @@
   },
   "author": {
     "name": "Nick Bumbarger",
-    "url": "https://nickbumbarger.com"
+    "url": "http://www.nickbumbarger.com"
   },
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nbumbarger/nbumbarger.github.io/issues"
   },
-  "homepage": "https://github.com/nbumbarger/nbumbarger.github.io",
+  "homepage": "http://www.nickbumbarger.com",
   "scripts": {
     "postinstall": "[ -f app/assets/scripts/config/local.js ] || echo \"'use strict';\n\nexport default {\n  environment: 'development'\n};\" > app/assets/scripts/config/local.js",
     "serve": "gulp collecticons && PAGES_ENV=development gulp serve",
@@ -110,6 +110,10 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-motion": "^0.5.0"
+    "react-motion": "^0.5.0",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6"
   }
 }

@@ -21,7 +21,8 @@ class HomeBackground extends Component {
       container: mapSettings.container,
       style: mapSettings.style,
       center: mapPOIs[this.state.poiIndex].coords,
-      zoom: mapSettings.zoom
+      zoom: mapSettings.zoom,
+      pitch: mapSettings.pitch
     })
     map.on('load', () => {
       this.mapZoomTo(map)
