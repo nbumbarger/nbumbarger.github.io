@@ -5,7 +5,7 @@ import { Motion, spring } from 'react-motion'
 import PropTypes from 'prop-types'
 
 import HeaderNavButton from './header-nav-button'
-import { navLinks } from '../constants'
+import { navLinks } from '../../constants'
 
 const HeaderNav = (props) => {
   return (

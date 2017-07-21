@@ -13,5 +13,5 @@ const { Home } = proxyquire.noCallThru().load('../../app/assets/scripts/views/ho
 test('home', t => {
   const view = shallow(<Home />)
 
-  t.truthy(view.hasClass('home'))
+  t.truthy(view.hasClass('page__home'))
 })
