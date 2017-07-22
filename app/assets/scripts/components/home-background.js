@@ -137,7 +137,7 @@ class HomeBackground extends Component {
 
   componentDidMount () {
     this.initializeMap()
-    this.addStatic()
+    // this.addStatic()
   }
 
   render () {
