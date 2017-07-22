@@ -2,7 +2,7 @@
 
 export const mapSettings = {
   container: 'map',
-  style: 'mapbox://styles/mapbox/satellite-v9',
+  style: 'mapbox://styles/nbumbarg/cj5frr9wz2ktl2srxp4dvpv8o',
   zoom: 19,
   pitch: 60,
   speed: 0.15,
