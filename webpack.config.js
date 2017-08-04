@@ -2,6 +2,7 @@ var process = require('process');
 var createHash = require('hash-generator');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var WebpackShellPlugin = require('webpack-shell-plugin');
 
 function getEntrySources(sources) {
   if (process.env.NODE_ENV !== 'production') {
@@ -48,6 +49,21 @@ module.exports = {
     ]
   },
   plugins: [
+    new WebpackShellPlugin({
+      onBuildStart: [
+        'node_modules/collecticons-processor/bin/collecticons.js ' +
+        'compile ' +
+        'app/assets/graphics/collecticons/ ' +
+        '--font-embed ' +
+        '--style-format sass ' +
+        '--style-dest app/assets/styles/ ' +
+        '--style-name collecticons ' +
+        '--class-name collecticon ' +
+        '--author-name Development Seed ' +
+        '--author-url https://developmentseed.org/ ' +
+        '--no-preview'
+      ]
+    }),
     new HtmlWebpackPlugin({
       filename: './dist/index.html',
       template: './app/index.html',
