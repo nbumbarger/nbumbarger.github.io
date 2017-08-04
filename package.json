@@ -17,8 +17,9 @@
   "homepage": "http://www.nickbumbarger.com",
   "scripts": {
     "postinstall": "[ -f app/assets/scripts/config/local.js ] || echo \"'use strict';\n\nexport default {\n  environment: 'development'\n};\" > app/assets/scripts/config/local.js",
-    "serve": "gulp collecticons && PAGES_ENV=development gulp serve",
-    "build": "gulp collecticons && PAGES_ENV=production NODE_ENV=production gulp",
+    "start": "http-server -p 3000",
+    "build": "NODE_ENV=production webpack -p",
+    "watch": "webpack-dev-server --hot --progress --colors",
     "lint": "eslint app/assets/scripts/ --ext .js",
     "test": "PAGES_ENV=testing nyc ava test -c 4",
     "report": "nyc report"
@@ -29,82 +30,41 @@
     ],
     "babel": "inherit"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ],
-    "ignore": "test",
-    "env": {
-      "development": {
-        "sourceMaps": "inline"
-      }
-    }
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015",
-            "react"
-          ]
-        }
-      ],
-      "require-globify",
-      "envify"
-    ]
-  },
   "devDependencies": {
     "ava": "^0.21.0",
-    "babel": "^6.23.0",
     "babel-core": "^6.25.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-react": "^6.23.0",
-    "babelify": "^7.3.0",
-    "browser-sync": "^2.18.8",
-    "browserify": "^14.1.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "collecticons-processor": "^3.0.0",
-    "del": "^2.2.2",
-    "envify": "^4.0.0",
+    "css-loader": "^0.28.4",
     "enzyme": "^2.9.1",
     "eslint": "^3.18.0",
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^2.1.1",
-    "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.6",
-    "gulp-csso": "^3.0.0",
-    "gulp-exit": "0.0.2",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rev": "^7.1.2",
-    "gulp-rev-replace": "^0.4.3",
-    "gulp-sass": "^3.1.0",
-    "gulp-size": "^2.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.1.2",
-    "gulp-useref": "^3.1.2",
-    "gulp-util": "^3.0.8",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "hash-generator": "^0.1.0",
+    "http-server": "^0.10.0",
+    "jsx-loader": "^0.13.2",
     "mapbox-gl-js-mock": "^0.28.0",
     "node-bourbon": "^4.2.8",
-    "node-notifier": "^5.1.2",
-    "node-sass": "^4.5.1",
+    "node-sass": "^4.5.3",
     "nyc": "^11.0.3",
     "proxyquire": "^1.8.0",
-    "react-test-renderer": "^15.6.1",
-    "require-globify": "^1.4.1",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^1.3.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
     "@turf/bearing": "^4.5.2",
     "classnames": "^2.2.5",
+    "html-webpack-plugin": "^2.30.1",
     "lodash.defaultsdeep": "^4.6.0",
     "mapbox-gl": "^0.38.0",
     "prop-types": "^15.5.10",

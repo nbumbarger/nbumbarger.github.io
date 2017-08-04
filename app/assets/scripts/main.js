@@ -10,6 +10,8 @@ import { HashRouter, Switch, Route } from 'react-router-dom'
 import config from './config'
 import reducer from './reducers'
 
+require('../styles/main.scss')
+
 const logger = createLogger({
   level: 'info',
   collapsed: true,
