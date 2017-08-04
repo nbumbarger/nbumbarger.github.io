@@ -1,3 +1,4 @@
+var path = require('path');
 var process = require('process');
 var createHash = require('hash-generator');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -22,7 +23,7 @@ module.exports = {
     ])
   },
   output: {
-    publicPath: 'http://localhost:8080/',
+    publicPath: 'http://localhost:8080/dist',
     filename: `./dist/assets/scripts/[name]-${jsHash}.js`
   },
   module: {
@@ -41,10 +42,14 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            'css-loader',
+            'css-loader?url=false',
             'sass-loader?includePaths[]=/Users/nick/repos/personal/nbumbarger.github.io/node_modules/bourbon/app/assets/stylesheets'
           ]
         })
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: "file-loader?name=./dist/assets/fonts/[name].[ext]&context=./app/assets/fonts"
       }
     ]
   },
