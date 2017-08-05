@@ -11,7 +11,8 @@ import config from './config'
 import reducer from './reducers'
 
 require('../styles/main.scss')
-require.context("../fonts/", true, /\.(eot|svg|ttf|woff|woff2)$/);
+require.context('../graphics/', true, /\.(png|jpg|jpeg|gif|svg)$/)
+require.context('../fonts/', true, /\.(eot|svg|ttf|woff|woff2)$/)
 
 const logger = createLogger({
   level: 'info',

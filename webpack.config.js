@@ -43,13 +43,25 @@ module.exports = {
           fallback: 'style-loader',
           use: [
             'css-loader?url=false',
-            'sass-loader?includePaths[]=/Users/nick/repos/personal/nbumbarger.github.io/node_modules/bourbon/app/assets/stylesheets'
+            `sass-loader?includePaths[]=${path.resolve(__dirname, 'node_modules/bourbon/app/assets/stylesheets')}`
           ]
         })
       },
       {
+        /* the "graphics" and "fonts" directories are copied explicitly,
+         * but the graphic and font loaders are siloed from one another
+         * so that site-referenced SVGs cannot be double-counted */
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        loader: 'file-loader?name=./dist/assets/graphics/[path][name].[ext]&context=./app/assets/graphics',
+        exclude: [
+          path.resolve(__dirname, 'app/assets/fonts'),
+          path.resolve(__dirname, 'app/assets/graphics/collecticons')
+        ]
+      },
+      {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: "file-loader?name=./dist/assets/fonts/[name].[ext]&context=./app/assets/fonts"
+        loader: 'file-loader?name=./dist/assets/fonts/[path][name].[ext]&context=./app/assets/fonts',
+        exclude: path.resolve(__dirname, 'app/assets/graphics')
       }
     ]
   },
@@ -58,10 +70,13 @@ module.exports = {
       onBuildStart: [
         'node_modules/collecticons-processor/bin/collecticons.js ' +
         'compile ' +
-        'app/assets/graphics/collecticons/ ' +
+        'app/assets/graphics/collecticons ' +
         '--font-embed ' +
+        '--font-dest app/assets/fonts ' +
+        '--font-name Collecticons ' +
+        '--font-types woff ' +
         '--style-format sass ' +
-        '--style-dest app/assets/styles/ ' +
+        '--style-dest app/assets/styles ' +
         '--style-name collecticons ' +
         '--class-name collecticon ' +
         '--author-name Development Seed ' +
@@ -79,4 +94,4 @@ module.exports = {
       allChunks: true
     })
   ]
-};
+}
