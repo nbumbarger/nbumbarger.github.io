@@ -1,20 +1,20 @@
-var path = require('path');
-var process = require('process');
-var createHash = require('hash-generator');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var WebpackShellPlugin = require('webpack-shell-plugin');
+var path = require('path')
+var process = require('process')
+var createHash = require('hash-generator')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var WebpackShellPlugin = require('webpack-shell-plugin')
 
-function getEntrySources(sources) {
+function getEntrySources (sources) {
   if (process.env.NODE_ENV !== 'production') {
-    sources.push('webpack-dev-server/client?http://localhost:8080');
-    sources.push('webpack/hot/only-dev-server');
+    sources.push('webpack-dev-server/client?http://localhost:8080')
+    sources.push('webpack/hot/only-dev-server')
   }
-  return sources;
+  return sources
 }
 
-var jsHash = createHash(10);
-var cssHash = createHash(10);
+var jsHash = createHash(10)
+var cssHash = createHash(10)
 
 module.exports = {
   entry: {
