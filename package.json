@@ -46,7 +46,6 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "hash-generator": "^0.1.0",
-    "http-server": "^0.10.0",
     "jsx-loader": "^0.13.2",
     "mapbox-gl-js-mock": "^0.28.0",
     "node-bourbon": "^4.2.8",
