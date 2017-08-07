@@ -24,20 +24,19 @@ module.exports = {
         test: /\.js$/,
         loaders: [
           'react-hot-loader',
-          'jsx-loader',
-          'babel-loader?presets[]=latest&presets[]=react'
+          'babel-loader'
         ],
         exclude: /node_modules/
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
             'css-loader?url=false',
             `sass-loader?includePaths[]=${path.resolve(__dirname, 'node_modules/bourbon/app/assets/stylesheets')}`
           ]
-        })
+        }))
       },
       {
         /* the "graphics" and "fonts" directories are copied explicitly,
@@ -77,7 +76,8 @@ module.exports = {
       filename: 'index.html',
       template: 'app/index.html',
       jsHash: jsHash,
-      cssHash: cssHash
+      cssHash: cssHash,
+      inject: false
     }),
     new ExtractTextPlugin(`assets/styles/main-${cssHash}.css`, {
       allChunks: true
