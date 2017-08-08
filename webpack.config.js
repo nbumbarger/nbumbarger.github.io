@@ -1,10 +1,10 @@
 const path = require('path')
 const webpack = require('webpack')
 const createHash = require('hash-generator')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const WebpackShellPlugin = require('webpack-shell-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const jsHash = createHash(10)
@@ -44,7 +44,7 @@ module.exports = {
         /* the "graphics" and "fonts" directories are copied explicitly,
          * but are additionally siloed in their loaders so that SVGs
          * referenced in code cannot be double-counted */
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
         loader: 'file-loader?name=assets/graphics/[path][name].[ext]&context=app/assets/graphics',
         exclude: path.resolve(__dirname, 'app/assets/fonts')
       },
