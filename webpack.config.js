@@ -5,9 +5,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const WebpackShellPlugin = require('webpack-shell-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
-var jsHash = createHash(10)
-var cssHash = createHash(10)
+const jsHash = createHash(10)
+const cssHash = createHash(10)
 
 module.exports = {
   entry: {
@@ -56,6 +57,26 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin('dist'),
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin(`assets/styles/main-${cssHash}.css`, {
+      allChunks: true,
+      disable: process.env.NODE_ENV !== 'production'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'app/index.html',
+      jsHash: jsHash,
+      cssHash: cssHash,
+      inject: false
+    }),
+    new ImageminPlugin({
+      test: 'assets/graphics/**',
+      gifsicle: {interlaced: true},
+      jpegtran: {progressive: true},
+      optipng: {optimizationLevel: 5},
+      svgo: {plugins: [{cleanupIDs: false}]},
+      disable: process.env.NODE_ENV !== 'production'
+    }),
     new WebpackShellPlugin({
       onBuildStart: [
         'node_modules/collecticons-processor/bin/collecticons.js ' +
@@ -73,18 +94,7 @@ module.exports = {
         '--author-url https://developmentseed.org/ ' +
         '--no-preview'
       ]
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'app/index.html',
-      jsHash: jsHash,
-      cssHash: cssHash,
-      inject: false
-    }),
-    new ExtractTextPlugin(`assets/styles/main-${cssHash}.css`, {
-      allChunks: true
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    })
   ],
   output: {
     filename: `assets/scripts/[name]-${jsHash}.js`,

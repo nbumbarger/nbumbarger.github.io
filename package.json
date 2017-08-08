@@ -48,6 +48,8 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "hash-generator": "^0.1.0",
+    "html-webpack-plugin": "^2.30.1",
+    "imagemin-webpack-plugin": "^1.5.0-beta.0",
     "mapbox-gl-js-mock": "^0.28.0",
     "node-bourbon": "^4.2.8",
     "node-sass": "^4.5.3",
@@ -63,7 +65,6 @@
   "dependencies": {
     "@turf/bearing": "^4.5.2",
     "classnames": "^2.2.5",
-    "html-webpack-plugin": "^2.30.1",
     "lodash.defaultsdeep": "^4.6.0",
     "mapbox-gl": "^0.38.0",
     "prop-types": "^15.5.10",
