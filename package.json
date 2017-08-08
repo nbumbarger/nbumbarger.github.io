@@ -65,15 +65,15 @@
     "webpack-shell-plugin": "^0.5.0"
   },
   "dependencies": {
-    "@turf/bearing": "^4.5.2",
+    "@turf/bearing": "^4.6.0",
     "classnames": "^2.2.5",
     "lodash.defaultsdeep": "^4.6.0",
-    "mapbox-gl": "^0.38.0",
+    "mapbox-gl": "^0.39.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-motion": "^0.5.0",
-    "react-redux": "^5.0.5",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.2",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6"
