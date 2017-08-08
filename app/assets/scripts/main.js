@@ -10,6 +10,10 @@ import { HashRouter, Switch, Route } from 'react-router-dom'
 import config from './config'
 import reducer from './reducers'
 
+require('../styles/main.scss')
+require.context('../graphics/', true, /\.(png|jpg|jpeg|gif|svg|ico)$/)
+require.context('../fonts/', true, /\.(eot|svg|ttf|woff|woff2)$/)
+
 const logger = createLogger({
   level: 'info',
   collapsed: true,
