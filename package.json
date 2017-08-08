@@ -37,6 +37,7 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
     "collecticons-processor": "^3.0.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-hot-loader": "^1.3.0",
     "css-loader": "^0.28.4",
     "enzyme": "^2.9.1",

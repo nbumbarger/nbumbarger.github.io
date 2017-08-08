@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const createHash = require('hash-generator')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const WebpackShellPlugin = require('webpack-shell-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -94,7 +95,13 @@ module.exports = {
         '--author-url https://developmentseed.org/ ' +
         '--no-preview'
       ]
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'CNAME' },
+      { from: 'README.md' },
+      { from: 'robots.txt' },
+      { from: 'share', to: 'share' }
+    ])
   ],
   output: {
     filename: `assets/scripts/[name]-${jsHash}.js`,
