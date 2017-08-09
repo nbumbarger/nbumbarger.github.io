@@ -20,7 +20,7 @@
     "build": "NODE_ENV=production webpack -p",
     "serve": "webpack-dev-server --hot --progress --colors --open",
     "lint": "eslint app/assets/scripts/ --ext .js",
-    "test": "PAGES_ENV=testing nyc ava test -c 4",
+    "test": "NODE_ENV=testing nyc ava test -c 4",
     "report": "nyc report"
   },
   "ava": {
