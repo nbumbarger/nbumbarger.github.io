@@ -8,14 +8,6 @@ const WebpackShellPlugin = require('webpack-shell-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 
-function isExternal (module) {
-  const context = module.context
-  if (typeof context !== 'string') {
-    return false
-  }
-  return context.indexOf('node_modules') !== -1
-}
-
 const jsHash = createHash(10)
 const cssHash = createHash(10)
 
@@ -68,10 +60,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin('dist'),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendors',
-      minChunks: (module) => isExternal(module)
-    }),
     new ExtractTextPlugin(`assets/styles/main-${cssHash}.css`, {
       allChunks: true,
       disable: process.env.NODE_ENV !== 'production'

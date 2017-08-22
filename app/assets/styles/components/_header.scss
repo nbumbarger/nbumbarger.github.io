@@ -4,7 +4,7 @@
   bottom: 1rem;
   left: 1rem;
   z-index: 2;
-  mix-blend-mode: darken;
+  mix-blend-mode: screen;
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -30,7 +30,7 @@
     h2 {
       font-size: 1.41rem;
       letter-spacing: 0.15rem;
-      color: rgba(0, 100, 200, 0.8);
+      color: rgba(255, 255, 255, 0.7);
       margin-left: 0.4rem;
       float: left;
       clear: left;
@@ -39,7 +39,7 @@
       text-shadow: 0 0 15px rgb(200, 100, 0);
     }
     :hover h2 {
-      text-shadow: 0 0 15px rgba(0, 100, 200, 0.5);
+      text-shadow: 0 0 15px rgb(255, 255, 255);
     }
   }
   .nav-activate, .nav-cancel {
@@ -95,13 +95,12 @@
   position: absolute;
   bottom: 1.75rem;
   z-index: 4;
-  mix-blend-mode: color-burn;
   .header-nav-button {
     float: left;
     width: 7.36rem;
     margin-left: 0.73rem;
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 0.15rem;
     list-style: none;
     transition: all 0.2s;
@@ -109,12 +108,13 @@
       color:rgb(230, 230, 230);
       text-decoration: none;
       &:hover {
-        text-shadow: 0 0 1px #000;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+        text-shadow: 0 0 5px rgb(255, 255, 255);
         .nav-button-icon {
-          background-color: rgba(0, 0, 0, 0.05);
+          background-color: rgba(255, 255, 255, 0.2);
         }
         .nav-button-text {
-          background-color: rgba(0, 0, 0, 0.075);
+          background-color: rgba(255, 255, 255, 0.075);
         }
       }
     }
@@ -126,15 +126,15 @@
       padding: 0 0.7rem;
       font-size: 1rem;
       line-height: 1.5rem;
-      color: #333;
-      background-color: rgba(0, 0, 0, 0.05);
-      border-right: 1px solid rgba(0, 0, 0, 0.25)
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
     .nav-button-text {
       font-size: 0.8rem;
       line-height: 1.5rem;
       text-align: center;
-      color: #000;
+      color: #fff;
     }
   }
 }
