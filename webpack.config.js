@@ -98,7 +98,6 @@ module.exports = {
       ]
     }),
     new CopyWebpackPlugin([
-      { from: 'CNAME' },
       { from: 'README.md' },
       { from: 'robots.txt' },
       { from: 'share', to: 'share' }
